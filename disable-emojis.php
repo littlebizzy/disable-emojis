@@ -13,6 +13,31 @@ Prefix: DSBEMJ
 
 
 /**
+ * Initialization
+ */
+
+// Block direct calls
+if (!function_exists('add_action'))
+	die;
+
+// Admin Notices module
+require_once(dirname(__FILE__).'/admin-notices.php');
+DSBEMJ_Admin_Notices::instance(__FILE__);
+register_uninstall_hook(__FILE__, array('DSBEMJ_Admin_Notices', 'uninstall'));
+
+
+/**
+ * Plugin code
+ */
+
+// Plugin constants
+define('DSBEMJ_FILE', __FILE__);
+define('DSBEMJ_PATH', dirname(DSBSRC_FILE));
+define('DSBEMJ_VERSION', '1.0.4');
+
+
+
+/**
  * Define main plugin class
  */
 class LB_Disable_Emojis {
@@ -116,8 +141,3 @@ function lb_disable_emojis() {
 }
 
 add_action( 'init', array( lb_disable_emojis(), 'init' ), 0 );
-
-if ( is_admin() ) {
-	require plugin_dir_path( __FILE__ ) . '/inc/admin-notices.php';
-	LBDE_Admin_Suggestions::instance();
-}
