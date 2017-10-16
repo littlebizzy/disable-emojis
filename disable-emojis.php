@@ -3,11 +3,12 @@
 Plugin Name: Disable Emojis
 Plugin URI: https://www.littlebizzy.com/plugins/disable-emojis
 Description: Completely disables both the old and new versions of WordPress emojis, removes the corresponding javascript calls, and improves page loading times.
-Version: 1.0.3
+Version: 1.0.4
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Prefix: DSBEMJ
 */
 
 
