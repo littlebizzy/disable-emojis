@@ -30,13 +30,6 @@ register_uninstall_hook(__FILE__, array('DSBEMJ_Admin_Notices', 'uninstall'));
  * Plugin code
  */
 
-// Plugin constants
-define('DSBEMJ_FILE', __FILE__);
-define('DSBEMJ_PATH', dirname(DSBSRC_FILE));
-define('DSBEMJ_VERSION', '1.0.4');
-
-
-
 /**
  * Define main plugin class
  */
