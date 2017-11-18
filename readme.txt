@@ -90,6 +90,15 @@ We invite you to check out a few other related free plugins that our team has al
 * [View Defined Constants](https://wordpress.org/plugins/view-defined-constants-littlebizzy/)
 * [Virtual Robots.txt](https://wordpress.org/plugins/virtual-robotstxt-littlebizzy/)
 
+#### Premium Plugins ####
+
+We invite you to check out a few premium plugins that our team has also produced that you may find especially useful:
+
+* [Purge Them All](https://www.littlebizzy.com/plugins/purge-them-all)
+* [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
+* [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
+* [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
+
 #### Special Thanks ####
 
 We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own free plugins and paid services:
@@ -100,6 +109,10 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
 * [WP Tavern](https://wptavern.com)
+
+#### Disclaimer ####
+
+We released this plugin in response to our managed hosting clients asking for better access to their server, and our primary goal will remain supporting that purpose. Although we are 100% open to fielding requests from the WordPress community, we kindly ask that you keep the above mentioned goals in mind, thanks!
 
 == Installation ==
 
