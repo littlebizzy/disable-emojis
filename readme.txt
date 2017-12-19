@@ -1,6 +1,7 @@
 === Disable Emojis ===
 
 Contributors: littlebizzy
+Donate link: https://www.patreon.com/littlebizzy
 Tags: disable, remove, emojis, emoticons, smileys
 Requires at least: 4.4
 Tested up to: 4.9
