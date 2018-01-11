@@ -20,7 +20,7 @@ class Factory extends Helpers\Factory {
 	/**
 	 * Actions object
 	 */
-	private function createActions() {
+	protected function createActions() {
 		return new Emojis\Actions;
 	}
 
@@ -28,7 +28,7 @@ class Factory extends Helpers\Factory {
 	/**
 	 * Filters object
 	 */
-	private function createFilters() {
+	protected function createFilters() {
 		return new Emojis\Filters;
 	}
 
