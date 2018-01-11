@@ -13,6 +13,11 @@ class Actions extends Emojis {
 
 
 
+	// Properties
+	// ---------------------------------------------------------------------------------------------------
+
+
+
 	/**
 	 * Involved actions
 	 */
@@ -30,15 +35,16 @@ class Actions extends Emojis {
 
 
 
+	// WP hooks
+	// ---------------------------------------------------------------------------------------------------
+
+
+
 	/**
 	 * Handle the WP init hook
 	 */
 	public function init() {
-		foreach ($actions as $func => $hooks) {
-			foreach ($hooks as $hook) {
-				remove_action($hook[0], $func, $hook[1]);
-			}
-		}
+		$this->remove('actions', $this->actions);
 	}
 
 
