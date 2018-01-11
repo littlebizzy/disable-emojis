@@ -157,7 +157,7 @@ final class Admin_Notices {
 		register_uninstall_hook($this->plugin_file, array(__CLASS__, 'uninstall'));
 
 		// Prefix from the class name
-		$this->prefix = PREFIX.'an';
+		$this->prefix = PREFIX.'_an_';
 
 		// Check notices
 		if (is_admin()) {
