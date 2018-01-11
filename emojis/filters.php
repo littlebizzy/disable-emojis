@@ -36,7 +36,7 @@ class Filters extends Emojis {
 	/**
 	 * Partial matching URL
 	 */
-	protected $matchingURL = 's.w.org/images/core/emoji/'
+	protected $matchingURL = 's.w.org/images/core/emoji/';
 
 
 
@@ -85,7 +85,7 @@ class Filters extends Emojis {
 		foreach ($urls as $key => $value) {
 
 			// Check item
-			$url = $value
+			$url = $value;
 			if (is_array($url)) {
 
 				// Copy attr
