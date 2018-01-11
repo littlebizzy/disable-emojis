@@ -1,12 +1,12 @@
 <?php
 
 // Subpackage namespace
-namespace LittleBizzy\PurgeThemAll\Helpers;
+namespace LittleBizzy\DisableEmojis\Helpers;
 
 /**
  * Plugin class
  *
- * @package Purge Them All
+ * @package Disable Emojis
  * @subpackage Helpers
  */
 class Plugin {
