@@ -82,7 +82,7 @@ class Filters extends Emojis {
 		$newURLs = [];
 
 		// Enum current values
-		foreach ($urls as $key => $value) {
+		foreach ($urls as $index => $value) {
 
 			// Check item
 			$url = $value;
