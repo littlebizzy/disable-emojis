@@ -50,13 +50,17 @@ class Emojis {
 			// Allowed hooks
 			foreach ($hooks as $hook) {
 
+				// Check priority
+				$tag = is_array($hook)? $hook[0]: $hook;
+				$priority = (is_array($hook) && isset($hook[1]))? $hook[1] : 10;
+
 				// Actions
 				if ('actions' == $type) {
-					remove_action($hook[0], $func, $hook[1]);
+					remove_action($tag, $func, $priority);
 
 				// Filters
 				} elseif ('filters' == $type) {
-					remove_filter($hook[0], $func, $hook[1]);
+					remove_filter($tag, $func, $priority);
 				}
 			}
 		}

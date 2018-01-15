@@ -23,11 +23,11 @@ class Filters extends Emojis {
 	 */
 	protected $filters = [
 		'wp_staticize_emoji' => [
-			['the_content_feed', 10],
-			['comment_text_rss', 10],
+			'the_content_feed',
+			'comment_text_rss',
 		],
 		'wp_staticize_emoji_for_email' => [
-			['wp_mail', 10],
+			'wp_mail',
 		],
 	];
 

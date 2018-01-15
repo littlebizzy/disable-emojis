@@ -24,12 +24,12 @@ class Actions extends Emojis {
 	private $actions = [
 		'print_emoji_detection_script' => [
 			['wp_head', 7],
-			['admin_print_scripts', 10],
-			['embed_head', 10], // Unsupported by the original plugin
+			'admin_print_scripts',
+			'embed_head', // Unsupported by the original plugin
 		],
 		'print_emoji_styles' => [
-			['wp_print_styles', 10],
-			['admin_print_styles', 10],
+			'wp_print_styles',
+			'admin_print_styles',
 		],
 	];
 
