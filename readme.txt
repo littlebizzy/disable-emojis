@@ -49,6 +49,12 @@ This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 a
 * Multisite Support: No
 * Uninstalls Data: Yes
 
+#### Code Inspiration ####
+
+This plugin was partially inspired either in "code or concept" by the open-source software and discussions mentioned below:
+
+* [Disable Emojis](https://wordpress.org/plugins/disable-emojis/)
+
 #### Admin Notices ####
 
 This plugin generates multiple [Admin "Nag" Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices#Disable_Nag_Notices) in the WP Admin dashboard. The first one fires during plugin activation which recommends several free plugins that we believe will enhance this plugin's features; this notice will re-appear once every 6 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear once every 9 months. These notices can be dismissed by clicking the **(x)** symbol in the upper right of the notice box. These notices may annoy or confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community while providing valuable (free) recommendations for optimizing their website.
