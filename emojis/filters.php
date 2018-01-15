@@ -64,7 +64,7 @@ class Filters extends Emojis {
 	 * Handle tinyMCE supported plugins
 	 */
 	public function tinyMCEPlugins($plugins) {
-		return (empty($plugins) || !is_array($plugins))? [] : array_diff($plugins, array('wpemoji'));
+		return (empty($plugins) || !is_array($plugins))? [] : array_diff($plugins, ['wpemoji']);
 	}
 
 
