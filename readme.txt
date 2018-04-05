@@ -18,11 +18,12 @@ Completely disables both the old and new versions of WordPress emojis, removes t
 
 Completely disables both the old and new versions of WordPress emojis, removes the corresponding javascript calls, and improves page loading times.
 
-* [**Patreon (support us with $1/mo)**](https://www.patreon.com/littlebizzy)
+* [**Join our FREE Facebook group for support!**](https://www.facebook.com/groups/littlebizzy/)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/disable-emojis)
 * [Plugin GitHub](https://github.com/littlebizzy/disable-emojis)
-* [SlickStack](https://slickstack.io)
-* [Starter Theme](https://starter.littlebizzy.com)
+* [SlickStack (LEMP stack automation)](https://slickstack.io)
+* [Starter (lighting-fast custom themes)](https://starter.littlebizzy.com)
+* [WP Lite boilerplate](https://wplite.org)
 
 #### The Long Version ####
 
@@ -71,15 +72,18 @@ We invite you to check out some of our other free plugins hosted on WP.org that 
 
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
 * [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
+* [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
+* [Disable Admin-AJAX](https://wordpress.org/plugins/disable-admin-ajax-littlebizzy/)
 * [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
 * [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
 * [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
 * [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
 * [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
+* [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
 * [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
 * [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
-* [Disable WooCommerce Styles](https://wordpress.org/plugins/diable-wc-styles-littlebizzy/)
+* [Disable WooCommerce Styles](https://wordpress.org/plugins/disable-wc-styles-littlebizzy/)
 * [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
 * [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
 * [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
@@ -89,6 +93,7 @@ We invite you to check out some of our other free plugins hosted on WP.org that 
 * [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
 * [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
 * [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
+* [Header Cleanup](https://wordpress.org/plugins/header-cleanup-littlebizzy/)
 * [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
 * [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
 * [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
@@ -114,11 +119,13 @@ We invite you to check out a few premium plugins that our team has also produced
 We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own plugins and services:
 
 * [Automattic](https://automattic.com)
+* [Brad Touesnard](https://bradt.ca)
 * [Daniel Auener](http://www.danielauener.com)
 * [Delicious Brains](https://deliciousbrains.com)
 * [Greg Rickaby](https://gregrickaby.com)
 * [Matt Mullenweg](https://ma.tt)
 * [Mika Epstein](https://halfelf.org)
+* [Mike Garrett](https://mikengarrett.com)
 * [Samuel Wood](http://ottopress.com)
 * [Scott Reilly](http://coffee2code.com)
 * [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
@@ -130,6 +137,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Rahul Bansal](https://profiles.wordpress.org/rahul286)
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
+* [Ryan Hellyer](https://geek.hellyer.kiwi)
 * [WP Chat](https://wpchat.com)
 * [WP Tavern](https://wptavern.com)
 
@@ -141,7 +149,7 @@ We released this plugin in response to our managed hosting clients asking for be
 
 1. Upload to `/wp-content/plugins/disable-emojis-littlebizzy` directory
 2. Activate via WP Admin > Plugins
-3. Verify that emojis javascript is no longer visible in source code (clear caches first)
+3. Verify that emojis javascript is no longer visible in source code (clear all caches first)
 
 == Frequently Asked Questions ==
 
