@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBEMJ
@@ -155,10 +155,14 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 == Changelog ==
 
+= 1.1.1 =
+* added warning for Multisite installations
+* updated recommended plugins
+
 = 1.1.0 =
-* plugin entirely re-written with namespaces
-* object oriented code
-* added more filters
+* plugin entirely re-written with PHP namespaces
+* plugin now uses object oriented code
+* added more "disable" filters
 * updated plugin meta
 * added support for `define('DISABLE_NAG_NOTICES', true);`
 * removed improperly credited Ryan Hellyer snippet
@@ -180,7 +184,7 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated recommended plugins
 
 = 1.0.2 =
-* added recommended plugins
+* added recommended plugin notices
 
 = 1.0.1 =
 * updated plugin meta
