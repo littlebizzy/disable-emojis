@@ -34,6 +34,11 @@ final class Admin_Notices {
 	private $days_dismissing_suggestions = 180; // 6 months reappear
 	private $suggestions_message = '%plugin% recommends the following free plugins:';
 	private $suggestions = array(
+		'disable-jq-migrate-littlebizzy' => array(
+			'name' => 'Disable jQuery Migrate',
+			'desc' => 'Easily prevent the jQuery migrate script that is included with WordPress core from being loaded to slim down source code (for advanced users only).',
+			'filename' => 'disable-jquery-migrate.php',
+		),
     		'disable-embeds-littlebizzy' => array(
 			'name' => 'Disable Embeds',
 			'desc' => 'Disables both external and internal embedding functions to avoid slow page render, instability and SEO issues, and to improve overall loading speed.',
@@ -49,15 +54,10 @@ final class Admin_Notices {
 			'desc' => 'Removes all query strings from static resources meaning that proxy servers and beyond can better cache your site content (plus, better SEO scores).',
 			'filename' => 'remove-query-strings.php',
 		),
-		'disable-search-littlebizzy' => array(
-			'name' => 'Disable Search',
-			'desc' => 'Completely disables the built-in WordPress search function to prevent snoopers or bots from querying your database or slowing down your website.',
-			'filename' => 'disable-search.php',
-		),
-		'server-status-littlebizzy' => array(
-			'name' => 'Server Status',
-			'desc' => 'Useful statistics about the server OS, CPU, RAM, load average, memory usage, IP address, hostname, timezone, disk space, PHP, MySQL, caches, etc.',
-			'filename' => 'server-status.php',
+		'header-cleanup-littlebizzy' => array(
+			'name' => 'Header Cleanup',
+			'desc' => 'Cleans up most of the unnecessary junk meta included by default in the WordPress header including generator, RSD, shortlink, previous and next, etc.',
+			'filename' => 'header-cleanup.php',
 		),
 	);
 
