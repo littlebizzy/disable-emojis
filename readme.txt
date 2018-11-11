@@ -4,10 +4,10 @@ Contributors: littlebizzy
 Donate link: https://www.patreon.com/littlebizzy
 Tags: disable, remove, emojis, emoticons, smileys
 Requires at least: 4.4
-Tested up to: 4.9
+Tested up to: 5.0
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.1.2
+Stable tag: 1.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: DSBEMJ
@@ -18,14 +18,12 @@ Completely disables both the old and new versions of WordPress emojis, removes t
 
 Completely disables both the old and new versions of WordPress emojis, removes the corresponding javascript calls, and improves page loading times.
 
-* [**Join our FREE Facebook group for support!**](https://www.facebook.com/groups/littlebizzy/)
+* [**Join our FREE Facebook group for support**](https://www.facebook.com/groups/littlebizzy/)
+* [**Worth a 5-star review? Thank you!**](https://wordpress.org/support/plugin/disable-emojis-littlebizzy/reviews/?rate=5#new-post)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/disable-emojis)
 * [Plugin GitHub](https://github.com/littlebizzy/disable-emojis)
-* [SlickStack (LEMP stack automation)](https://slickstack.io)
-* [Starter (lighting-fast custom themes)](https://starter.littlebizzy.com)
-* [WP Lite boilerplate](https://wplite.org)
 
-#### The Long Version ####
+#### Current Features ####
 
 Unlike some other similar plugins, this plugin forces the "convert emoticons" option in WordPress settings to be unregistered directly using a hook. If users deactivate this plugin, that setting will return to previous value (whatever it was set to prior to activating this plugin) so it's very conflict free.
 
@@ -33,123 +31,65 @@ ALL types of emojis and emoticons (smileys) are disabled with this plugin, inclu
 
 #### Compatibility ####
 
-This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only; for both performance and security reasons, we highly recommend against using WordPress Multisite for the vast majority of projects.
+This plugin has been designed for use on [SlickStack](https://slickstack.io) web servers with PHP 7.2 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installations only; for both performance and usability reasons, we highly recommend avoiding WordPress Multisite for the vast majority of projects.
+
+Any of our WordPress plugins may also be loaded as "Must-Use" plugins by using our free [Autoloader](https://github.com/littlebizzy/autoloader) script in the `mu-plugins` directory.
+
+#### Defined Constants ####
+
+    /* Plugin Meta */
+    define('DISABLE_NAG_NOTICES', true);
 
 #### Plugin Features ####
 
+* Prefix: DSBEMJ
+* Parent Plugin: [**Speed Demon**](https://wordpress.org/plugins/speed-demon-littlebizzy/)
+* Disable Nag Notices: [Yes](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices#Disable_Nag_Notices)
 * Settings Page: No
-* Premium Version Available: Yes ([Speed Demon](https://www.littlebizzy.com/plugins/speed-demon))
-* Includes Media (Images, Icons, Etc): No
+* PHP Namespaces: Yes
+* Object-Oriented Code: Yes
+* Includes Media (images, icons, etc): No
 * Includes CSS: No
 * Database Storage: Yes
   * Transients: No
-  * Options: Yes
+  * WP Options Table: Yes
+  * Other Tables: No
   * Creates New Tables: No
+  * Creates New WP Cron Jobs: No
 * Database Queries: Backend Only (Options API)
-* Must-Use Support: Yes (Use With [Autoloader](https://github.com/littlebizzy/autoloader))
+* Must-Use Support: [Yes](https://github.com/littlebizzy/autoloader)
 * Multisite Support: No
 * Uninstalls Data: Yes
 
-#### Code Inspiration ####
-
-This plugin was partially inspired either in "code or concept" by the open-source software and discussions mentioned below:
-
-* [Disable Emojis](https://wordpress.org/plugins/disable-emojis/)
-
-#### Admin Notices ####
-
-This plugin generates multiple [Admin "Nag" Notices](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices#Disable_Nag_Notices) in the WP Admin dashboard. The first one fires during plugin activation which recommends several free plugins that we believe will enhance this plugin's features; this notice will re-appear once every 6 months as our code and recommendations evolve. The second is a notice that fires a few days after plugin activation which asks for a 5-star rating of this plugin on its WordPress.org profile page. This notice will re-appear once every 9 months. These notices can be dismissed by clicking the **(x)** symbol in the upper right of the notice box. These notices may annoy or confuse certain users, but are appreciated by the majority of our userbase, who understand that these notices support our free contributions to the WordPress community while providing valuable (free) recommendations for optimizing their website.
-
-If you feel these notices are too annoying, we encourage you to consider one or more of our upcoming premium plugins that combine several free plugin features into a single control panel, or even consider developing your own plugins for WordPress, if supporting free plugin authors is too frustrating for you. A final alternative would be to place the following defined constant in your `wp-config.php` or `functions.php` file to manually hide this plugin's nag notices:
-
-    define('DISABLE_NAG_NOTICES', true);
-
-Note: This will only affect the nag notices mentioned above, and will not affect any other notices generated by this plugin or other plugins, such as one-time notices for admin-level users.
-
-#### Recommended Plugins ####
-
-We invite you to check out some of our other free plugins hosted on WP.org that you may find particularly valuable:
-
-* [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
-* [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
-* [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
-* [Disable Admin-AJAX](https://wordpress.org/plugins/disable-admin-ajax-littlebizzy/)
-* [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
-* [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
-* [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
-* [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
-* [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
-* [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
-* [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
-* [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
-* [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
-* [Disable WooCommerce Styles](https://wordpress.org/plugins/disable-wc-styles-littlebizzy/)
-* [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
-* [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
-* [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
-* [Download Theme](https://wordpress.org/plugins/download-theme-littlebizzy/)
-* [Duplicate Post](https://wordpress.org/plugins/duplicate-post-littlebizzy/)
-* [Export Database](https://wordpress.org/plugins/export-database-littlebizzy/)
-* [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
-* [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
-* [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
-* [Header Cleanup](https://wordpress.org/plugins/header-cleanup-littlebizzy/)
-* [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
-* [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
-* [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
-* [Remove Category Base](https://wordpress.org/plugins/remove-category-base-littlebizzy/)
-* [Remove Query Strings](https://wordpress.org/plugins/remove-query-strings-littlebizzy/)
-* [Server Status](https://wordpress.org/plugins/server-status-littlebizzy/)
-* [StatCounter](https://wordpress.org/plugins/sc-littlebizzy/)
-* [View Defined Constants](https://wordpress.org/plugins/view-defined-constants-littlebizzy/)
-* [Virtual Robots.txt](https://wordpress.org/plugins/virtual-robotstxt-littlebizzy/)
-
-#### Premium Plugins ####
-
-We invite you to check out a few premium plugins that our team has also produced that you may find particularly valuable:
-
-* [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
-* [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
-* [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
-* [Security Guard](https://www.littlebizzy.com/plugins/security-guard)
-* [Genghis Khan](https://www.littlebizzy.com/plugins/genghis-khan)
-
 #### Special Thanks ####
 
-We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own plugins and services:
-
-* [Automattic](https://automattic.com)
-* [Brad Touesnard](https://bradt.ca)
-* [Daniel Auener](http://www.danielauener.com)
-* [Delicious Brains](https://deliciousbrains.com)
-* [Greg Rickaby](https://gregrickaby.com)
-* [Matt Mullenweg](https://ma.tt)
-* [Mika Epstein](https://halfelf.org)
-* [Mike Garrett](https://mikengarrett.com)
-* [Samuel Wood](http://ottopress.com)
-* [Scott Reilly](http://coffee2code.com)
-* [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
-* [Jeff Starr](https://perishablepress.com)
-* [Jeff Chandler](https://jeffc.me)
-* [Jeff Matson](https://jeffmatson.net)
-* [John James Jacoby](https://jjj.blog)
-* [Leland Fiegel](https://leland.me)
-* [Rahul Bansal](https://profiles.wordpress.org/rahul286)
-* [Roots](https://roots.io)
-* [rtCamp](https://rtcamp.com)
-* [Ryan Hellyer](https://geek.hellyer.kiwi)
-* [WP Chat](https://wpchat.com)
-* [WP Tavern](https://wptavern.com)
+[Alex Georgiou](https://www.alexgeorgiou.gr), [Automattic](https://automattic.com), [Brad Touesnard](https://bradt.ca), [Daniel Auener](http://www.danielauener.com), [Delicious Brains](https://deliciousbrains.com), [Greg Rickaby](https://gregrickaby.com), [Matt Mullenweg](https://ma.tt), [Mika Epstein](https://halfelf.org), [Mike Garrett](https://mikengarrett.com), [Samuel Wood](http://ottopress.com), [Scott Reilly](http://coffee2code.com), [Jan Dembowski](https://profiles.wordpress.org/jdembowski), [Jeff Starr](https://perishablepress.com), [Jeff Chandler](https://jeffc.me), [Jeff Matson](https://jeffmatson.net), [Jeremy Wagner](https://jeremywagner.me), [John James Jacoby](https://jjj.blog), [Leland Fiegel](https://leland.me), [Luke Cavanagh](https://github.com/lukecav), [Mike Jolley](https://mikejolley.com), [Pau Iglesias](https://pauiglesias.com), [Paul Irish](https://www.paulirish.com), [Rahul Bansal](https://profiles.wordpress.org/rahul286), [Roots](https://roots.io), [rtCamp](https://rtcamp.com), [Ryan Hellyer](https://geek.hellyer.kiwi), [WP Chat](https://wpchat.com), [WP Tavern](https://wptavern.com)
 
 #### Disclaimer ####
 
-We released this plugin in response to our managed hosting clients asking for better access to their server, and our primary goal will remain supporting that purpose. Although we are 100% open to fielding requests from the WordPress community, we kindly ask that you keep the above mentioned goals in mind. Thanks!
+We released this plugin in response to our managed hosting clients asking for better access to their server, and our primary goal will remain supporting that purpose. Although we are 100% open to fielding requests from the WordPress community, we kindly ask that you keep these conditions in mind, and refrain from slandering, threatening, or harassing our team members in order to get a feature added, or to otherwise get "free" support. The only place you should be contacting us is in our free [**Facebook group**](https://www.facebook.com/groups/littlebizzy/) which has been setup for this purpose, or via GitHub if you are an experienced developer. Thank you!
+
+#### Our Philosophy ####
+
+> "Decisions, not options." -- WordPress.org
+
+> "Everything should be made as simple as possible, but not simpler." -- Albert Einstein, et al
+
+> "Write programs that do one thing and do it well... write programs to work together." -- Doug McIlroy
+
+> "The innovation that this industry talks about so much is bullshit. Anybody can innovate... 99% of it is 'Get the work done.' The real work is in the details." -- Linus Torvalds
+
+#### Search Keywords ####
+
+disable, disable emojis, disable emoticons, disable smileys, remove, remove emojis, remove emoticons, remove smileys
 
 == Installation ==
 
-1. Upload to `/wp-content/plugins/disable-emojis-littlebizzy` directory
+1. Upload to `/wp-content/plugins/disable-emojis-littlebizzy`
 2. Activate via WP Admin > Plugins
-3. Verify that emojis javascript is no longer visible in source code (clear all caches first)
+3. Test plugin is working:
+
+After plugin activation, purge all caches. Then, check the source code of your website to verify all related emojis javascript and CSS files are no longer loading, and text symbols such as `:)` are no longer being converted to emoji images in your posts.
 
 == Frequently Asked Questions ==
 
@@ -159,9 +99,12 @@ There is no settings page to maintain to speed and stability.
 
 = I have a suggestion, how can I let you know? =
 
-Please avoid leaving negative reviews in order to get a feature implemented. Instead, we kindly ask that you post your feedback on the wordpress.org support forums by tagging this plugin in your post. If needed, you may also contact our homepage.
+Please avoid leaving negative reviews in order to get a feature implemented. Instead, join our free Facebook group.
 
 == Changelog ==
+
+= 1.2.0 =
+* tested with WP 5.0
 
 = 1.1.2 =
 * updated plugin meta
@@ -172,12 +115,12 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 = 1.1.0 =
 * plugin entirely re-written with PHP namespaces
-* plugin now uses object-oriented code
+* plugin uses object-oriented code
 * added more "disable" filters
-* updated plugin meta
 * support for `DISABLE_NAG_NOTICES`
 * removed improperly credited Ryan Hellyer code snippet
 * (apologies to Ryan Hellyer)
+* updated plugin meta
 
 = 1.0.5 =
 * tested with WP 4.9
@@ -186,8 +129,8 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 * updated plugin meta
 
 = 1.0.4 =
-* added WP.org rating request notice
 * optimized plugin code
+* added rating request notice
 * updated recommended plugins
 
 = 1.0.3 =
@@ -202,4 +145,3 @@ Please avoid leaving negative reviews in order to get a feature implemented. Ins
 
 = 1.0.0 =
 * initial release
-* tested with PHP 7.0
