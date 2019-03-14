@@ -2,13 +2,17 @@
 
 Completely disables both the old and new versions of WordPress emojis, removes the corresponding javascript calls, and improves page loading times.
 
-* [Plugin Homepage (LittleBizzy.com)](https://www.littlebizzy.com/plugins/disable-emojis)
-* [Free Facebook Group](https://www.facebook.com/groups/littlebizzy/)
+* [Plugin Homepage](https://www.littlebizzy.com/plugins/force-https)
+* [Download Latest Version (ZIP)](https://github.com/littlebizzy/disable-emojis/archive/1.2.0.zip)
+* [**Become A LittleBizzy.com Member Today!**](https://www.littlebizzy.com/members)
 
 ### Defined Constants
 
     /* Plugin Meta */
-    define('DISABLE_NAG_NOTICES', true);
+    define('AUTOMATIC_UPDATE_PLUGINS', false); // default = false
+    define('DISABLE_NAG_NOTICES', true); // default = true
+    
+    /* Disable Emojis Functions */
 
 ### Compatibility
 
