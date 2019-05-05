@@ -13,6 +13,7 @@ Completely disables both the old and new versions of WordPress emojis, removes t
     define('DISABLE_NAG_NOTICES', true); // default = true
     
     /* Disable Emojis Functions */
+    define('DISABLE_EMOJIS', 'true'); // default = true
 
 ### Compatibility
 
