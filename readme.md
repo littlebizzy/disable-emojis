@@ -6,6 +6,9 @@ Disables emoji scripts and styles
 
 ### 2.0.0
 - completely refactored plugin to WordPress coding standards
+- disables emoji scripts and styles from frontend, backend, embeds, emails, RSS feeds, TinyMCE, Gutenberg, XML-RPC and REST API
+- strips emoji unicode from post titles, post content, post excerpts, and comments using regex
+- improved priorities consistency and organization
 - supports PHP 7.0 to PHP 8.3
 - supports Git Updater
 - supports Multisite
