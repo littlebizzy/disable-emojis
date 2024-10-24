@@ -2,7 +2,7 @@
 /*
 Plugin Name: Disable Emojis
 Plugin URI: https://www.littlebizzy.com/plugins/disable-emojis
-Description: Disables the emoji scripts and styles in WordPress.
+Description: Disables emoji scripts and styles
 Version: 2.0.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
