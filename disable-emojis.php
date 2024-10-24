@@ -23,31 +23,37 @@ add_filter( 'gu_override_dot_org', function( $overrides ) {
     return $overrides;
 }, 999 );
 
-// hook to disable emoji scripts
-add_action('init', function() {
+// disable emoji scripts in all relevant contexts
+add_action( 'init', function() {
     // remove emoji actions from the front-end
-    remove_action('wp_head', 'print_emoji_detection_script', 7);
-    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
     
     // remove emoji actions from the admin area
-    remove_action('admin_print_scripts', 'print_emoji_detection_script');
-    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
     
-    // disable emoji in emails and RSS
-    remove_action('wp_mail', 'wp_staticize_emoji_for_email');
-    remove_action('the_content_feed', 'wp_staticize_emoji');
-    remove_action('comment_text_rss', 'wp_staticize_emoji');
+    // disable emojis in emails and RSS feeds
+    remove_action( 'wp_mail', 'wp_staticize_emoji_for_email' );
+    remove_action( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_action( 'comment_text_rss', 'wp_staticize_emoji' );
 
-    // filter to remove tinymce emojis (classic editor)
-    add_filter('tiny_mce_plugins', function($plugins) {
-        if (is_array($plugins)) {
-            return array_diff($plugins, ['wpemoji']);
+    // remove emoji support from TinyMCE (classic editor)
+    add_filter( 'tiny_mce_plugins', function( $plugins ) {
+        if ( is_array( $plugins ) ) {
+            return array_diff( $plugins, [ 'wpemoji' ] );
         }
         return [];
     });
 
-    // disable dns prefetch for emojis
-    add_filter('emoji_svg_url', '__return_false');
+    // disable DNS prefetch for emojis
+    add_filter( 'emoji_svg_url', '__return_false' );
+
+    // disable emoji scripts for XML-RPC requests
+    if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
+        remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+        remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    }
 });
 
 // disable emoji scripts in block editor (Gutenberg)
