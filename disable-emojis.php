@@ -63,11 +63,28 @@ add_action( 'init', function() {
         remove_action( 'wp_print_styles', 'print_emoji_styles' );
     }
 
-    // disable emojis in post titles (including RSS feed titles)
+    // remove emojis in post titles (including RSS feed titles)
     add_filter( 'the_title', function( $title ) {
-        // remove only emojis by targeting specific Unicode emoji ranges
         $emoji_regex = '/[\x{1F600}-\x{1F64F}\x{1F300}-\x{1F5FF}\x{1F680}-\x{1F6FF}\x{2600}-\x{26FF}\x{2700}-\x{27BF}\x{1F1E6}-\x{1F1FF}\x{1F900}-\x{1F9FF}\x{1FA70}-\x{1FAFF}]/u';
         return preg_replace( $emoji_regex, '', $title );
+    });
+
+    // remove emojis in post content
+    add_filter( 'the_content', function( $content ) {
+        $emoji_regex = '/[\x{1F600}-\x{1F64F}\x{1F300}-\x{1F5FF}\x{1F680}-\x{1F6FF}\x{2600}-\x{26FF}\x{2700}-\x{27BF}\x{1F1E6}-\x{1F1FF}\x{1F900}-\x{1F9FF}\x{1FA70}-\x{1FAFF}]/u';
+        return preg_replace( $emoji_regex, '', $content );
+    });
+
+    // remove emojis in post excerpts
+    add_filter( 'the_excerpt', function( $excerpt ) {
+        $emoji_regex = '/[\x{1F600}-\x{1F64F}\x{1F300}-\x{1F5FF}\x{1F680}-\x{1F6FF}\x{2600}-\x{26FF}\x{2700}-\x{27BF}\x{1F1E6}-\x{1F1FF}\x{1F900}-\x{1F9FF}\x{1FA70}-\x{1FAFF}]/u';
+        return preg_replace( $emoji_regex, '', $excerpt );
+    });
+
+    // remove emojis in comment content
+    add_filter( 'comment_text', function( $comment_text ) {
+        $emoji_regex = '/[\x{1F600}-\x{1F64F}\x{1F300}-\x{1F5FF}\x{1F680}-\x{1F6FF}\x{2600}-\x{26FF}\x{2700}-\x{27BF}\x{1F1E6}-\x{1F1FF}\x{1F900}-\x{1F9FF}\x{1FA70}-\x{1FAFF}]/u';
+        return preg_replace( $emoji_regex, '', $comment_text );
     });
 });
 
