@@ -33,8 +33,10 @@ add_action( 'init', function() {
     remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
     remove_action( 'admin_print_styles', 'print_emoji_styles' );
     
-    // disable emojis in emails and RSS feeds
+    // disable emojis in emails
     remove_action( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+    // disable emojis in RSS feeds
     remove_action( 'the_content_feed', 'wp_staticize_emoji' );
     remove_action( 'comment_text_rss', 'wp_staticize_emoji' );
 
@@ -43,17 +45,30 @@ add_action( 'init', function() {
         if ( is_array( $plugins ) ) {
             return array_diff( $plugins, [ 'wpemoji' ] );
         }
-        return [];
+        return $plugins;
     });
 
     // disable DNS prefetch for emojis
     add_filter( 'emoji_svg_url', '__return_false' );
 
-    // disable emoji scripts for XML-RPC requests
+    // disable emoji scripts for XML-RPC requests (safety net)
     if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
         remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
         remove_action( 'wp_print_styles', 'print_emoji_styles' );
     }
+
+    // disable emoji scripts for REST API requests (safety net)
+    if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+        remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+        remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    }
+
+    // disable emojis in post titles (including RSS feed titles)
+    add_filter( 'the_title', function( $title ) {
+        // remove only emojis by targeting specific Unicode emoji ranges
+        $emoji_regex = '/[\x{1F600}-\x{1F64F}\x{1F300}-\x{1F5FF}\x{1F680}-\x{1F6FF}\x{2600}-\x{26FF}\x{2700}-\x{27BF}\x{1F1E6}-\x{1F1FF}\x{1F900}-\x{1F9FF}\x{1FA70}-\x{1FAFF}]/u';
+        return preg_replace( $emoji_regex, '', $title );
+    });
 });
 
 // disable emoji scripts in block editor (Gutenberg)
