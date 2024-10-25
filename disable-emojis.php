@@ -3,7 +3,8 @@
 Plugin Name: Disable Emojis
 Plugin URI: https://www.littlebizzy.com/plugins/disable-emojis
 Description: Disables emoji scripts and styles
-Version: 2.0.0
+Version: 2.0.1
+Requires PHP: 7.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
