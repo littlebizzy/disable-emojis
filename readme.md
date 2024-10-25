@@ -4,6 +4,9 @@ Disables emoji scripts and styles
 
 ## Changelog
 
+## 2.0.1
+- added `Requires PHP` plugin header
+
 ### 2.0.0
 - completely refactored plugin to WordPress coding standards
 - disables emoji scripts and styles from frontend, backend, embeds, emails, RSS feeds, TinyMCE, Gutenberg, XML-RPC and REST API
